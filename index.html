@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/global.css">
+    <title>Componentes</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Componentes</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Bootstrap</h1>
+            <h2>Biblioteca que muda o desenvolvimento web!</h2>
+        </section>
+        
+        <section id="sobre">
+            <div class="card-sobre">
+                <h3>O que é o Bootstrap?</h3>
+                <p>Bootstrap é uma biblioteca de código aberto para desenvolvimento de interfaces web responsivas e modernas. Ele fornece um conjunto de ferramentas, estilos e componentes pré-construídos que facilitam a criação de sites e aplicativos web de forma rápida e eficiente.</p>
+                <img src="bootstrap-logo.png" alt="Logo do Bootstrap">
+            </div>
+        </section>
+
+        <section id="componentes">
+            <h2>Componentes do Bootstrap</h2>
+            <p>Bootstrap oferece diversos componentes prontos para uso.</p>
+
+            <div class="nav-components">
+                <button class="btn nav-button" data-target=".card-components">Cards</button>
+                <button class="btn nav-button" data-target=".list-components">Listas</button>
+                <button class="btn nav-button" data-target=".button-components">Botões</button>
+                <button class="btn nav-button" data-target=".form-components">Formulários</button>
+                <button class="btn nav-button" data-target=".table-components">Tabelas</button>
+                <button class="btn nav-button" data-target=".extra-components">Extra</button>
+            </div>
+
+            <div class="card-components component-section active">
+                <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">Card subtitle</h6>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                    <a href="#" class="card-link">Card link</a>
+                    <a href="#" class="card-link">Another link</a>
+                </div>
+            </div>
+            <div class="list-components component-section">
+
+            </div>
+            <div class="button-components component-section">
+
+            </div>
+           
+            <div class="form-components component-section">
+
+            </div>
+            <div class="table-components component-section">
+            
+            </div>
+            
+            <div class="extra-components component-section">
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

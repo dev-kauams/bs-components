@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    header {
+
+        nav {
+
+        }
+
+    }
+
+    main {
+
+        section {
+
+        }
+
+        #home {
+
+        }
+
+        #sobre {
+
+        }
+
+        #componentes {
+            
+
+            .component-section { /* Não MEXER! */
+                display: none;
+            }
+
+            .active {
+                display: block; /* Não MEXER! */
+            }
+        }
+    }
+
+    footer {
+
+    }
+}
