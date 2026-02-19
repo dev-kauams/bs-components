@@ -4,44 +4,152 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
+    background: #121212;
+    color: #e9ecef;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
 
     header {
+        height: 10dvh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        z-index: 1000;
+        background: rgba(18, 18, 18, 0.8);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
-        nav {
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+            padding: 0;
+            margin: 0;
 
+            li a {
+                color: #fff;
+                text-decoration: none;
+                font-weight: 500;
+                padding: 0.5rem 1.2rem;
+                border-radius: 20px;
+                background: #6a1b9a;
+                transition: 0.3s;
+
+                &:hover {
+                    background: #8e24aa;
+                    box-shadow: 0 0 15px rgba(142, 36, 170, 0.5);
+                }
+            }
         }
-
     }
 
     main {
-
-        section {
-
-        }
+        padding-top: 10dvh;
 
         #home {
-
-        }
-
-        #sobre {
-
+            height: 90dvh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url(../assets/background-home.png);
+            background-size: cover;
+            background-position: center;
+            
+            h1 { font-size: 4rem; color: #bb86fc; font-weight: 800; }
+            h2 { color: #adb5bd; font-weight: 300; }
         }
 
         #componentes {
-            
+            padding: 5rem 0;
 
-            .component-section { /* Não MEXER! */
-                display: none;
+            .nav-components {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                margin-bottom: 3rem;
+
+                .nav-button {
+                    border: 1px solid #6a1b9a;
+                    background: transparent;
+                    color: #fff;
+                    padding: 0.6rem 1.5rem;
+                    border-radius: 5px;
+                    transition: 0.3s;
+
+                    &:hover, &.active {
+                        background: #6a1b9a;
+                        cursor: pointer;
+                    }
+                }
             }
 
-            .active {
-                display: block; /* Não MEXER! */
+            /* Estilização para compatibilidade com Bootstrap Dark */
+            .card {
+                background: #1e1e1e;
+                border: 1px solid #333;
+                color: #fff;
+
+                .card-header { background: #2d2d2d; border-bottom: 1px solid #333; color: #bb86fc; }
+                .list-group-item { background: #1e1e1e; color: #ccc; border-color: #333; }
+                .card-subtitle { color: #888 !important; }
+                .card-link { color: #bb86fc; text-decoration: none; &:hover { color: #fff; } }
+            }
+
+            .list-group-item { background: #1e1e1e; color: #fff; border: 1px solid #333; }
+            
+            .form-control {
+                background: #252525;
+                border: 1px solid #444;
+                color: #fff;
+                &:focus { background: #2d2d2d; color: #fff; border-color: #6a1b9a; box-shadow: none; }
+            }
+
+            .component-section {
+                display: none;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 2rem;
+                min-height: 400px;
+                padding: 2rem;
+                background: #161616;
+                border-radius: 15px;
+            }
+
+            .active { display: flex; animation: fadeIn 0.5s ease forwards; }
+        }
+
+        #sobre {
+            padding-bottom: 5rem;
+            .card-sobre {
+                background: #1e1e1e;
+                padding: 3rem;
+                border-radius: 15px;
+                border-left: 6px solid #6a1b9a;
+                text-align: center;
+                h3 { color: #bb86fc; margin-bottom: 1.5rem; }
             }
         }
     }
 
     footer {
-
+        background: #0a0a0a;
+        padding: 3rem;
+        text-align: center;
+        border-top: 1px solid #333;
+        p { margin: 0; color: #666; font-size: 0.9rem; }
     }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
