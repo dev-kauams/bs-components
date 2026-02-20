@@ -3,15 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bootstrap</title>
-    <meta name="description" content="Explore os principais componentes do Bootstrap com um tema escuro customizado.">
+    <title>Bootstrap Dark Theme</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/components/buttons.css">
-    <link rel="stylesheet" href="css/components/cards.css">
-    <link rel="stylesheet" href="css/components/lists.css">
-    <link rel="stylesheet" href="css/components/form.css">
-    <link rel="stylesheet" href="css/components/carousel.css">
 </head>
 <body>
 
@@ -26,170 +20,89 @@
     </header>
 
     <main>
-        <section id="home" aria-labelledby="home-title">
-            <h1 id="home-title">Bootstrap</h1>
+        <section id="home">
+            <h1>Bootstrap</h1>
             <p>A biblioteca que molda a web moderna</p>
         </section>
 
-        <section id="componentes" class="container" aria-labelledby="componentes-title">
+        <section id="componentes" class="container">
             <div class="text-center mb-5">
-                <h2 id="componentes-title">Componentes</h2>
+                <h2>Componentes</h2>
                 <p>Explore as funcionalidades prontas para o seu projeto.</p>
             </div>
 
-            <nav class="nav-components" aria-label="Navegação de componentes" role="tablist">
-                <button
-                    class="nav-button"
-                    type="button"
-                    role="tab"
-                    aria-controls="card-panel"
-                    data-target="#card-panel"
-                >Cards</button>
-                <button
-                    class="nav-button"
-                    type="button"
-                    role="tab"
-                    aria-controls="list-panel"
-                    data-target="#list-panel"
-                >Listas</button>
-                <button
-                    class="nav-button"
-                    type="button"
-                    role="tab"
-                    aria-controls="button-panel"
-                    data-target="#button-panel"
-                >Botões</button>
-                <button
-                    class="nav-button"
-                    type="button"
-                    role="tab"
-                    aria-controls="form-panel"
-                    data-target="#form-panel"
-                >Formulários</button>
-                <button
-                    class="nav-button"
-                    type="button"
-                    role="tab"
-                    aria-controls="carousel-panel"
-                    data-target="#carousel-panel"
-                >Carrossel</button>
-            </nav>
-
-            <div id="card-panel" class="component-section card-components active" role="tabpanel">
-                <article class="card card-custom">
-                    <div class="card-body">
-                        <h3 class="card-title">Título do Card</h3>
-                        <h4 class="card-subtitle mb-2">Exemplo Dark</h4>
-                        <p class="card-text">Conteúdo estruturado com as cores do seu novo tema.</p>
-                        <a href="#" class="card-link">Ver mais</a>
-                    </div>
-                </article>
-
-                <article class="card card-custom">
-                    <div class="card-body">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Item Alpha</li>
-                            <li class="list-group-item">Item Beta</li>
-                        </ul>
-                    </div>
-                </article>
+            <div class="segmented-control" role="tablist">
+                <button class="nav-button active" data-target="#card-panel" role="tab" aria-selected="true">Cards</button>
+                <button class="nav-button" data-target="#list-panel" role="tab" aria-selected="false">Listas</button>
+                <button class="nav-button" data-target="#button-panel" role="tab" aria-selected="false">Botões</button>
+                <button class="nav-button" data-target="#form-panel" role="tab" aria-selected="false">Forms</button>
+                <button class="nav-button" data-target="#carousel-panel" role="tab" aria-selected="false">Slides</button>
             </div>
 
-            <div id="list-panel" class="component-section list-components" role="tabpanel">
-                <ul class="list-group w-50" aria-label="Exemplo de lista">
-                    <li class="list-group-item">Primeiro Item da Lista</li>
-                    <li class="list-group-item">Segundo Item da Lista</li>
-                    <li class="list-group-item">Terceiro Item da Lista</li>
-                </ul>
-            </div>
-
-            <div id="button-panel" class="component-section button-components" role="tabpanel">
-                <div class="d-flex gap-2 flex-wrap justify-content-center flex-row">
-                    <button type="button" class="btn btn-primary">Primary</button>
-                    <button type="button" class="btn btn-outline-light">Outline</button>
-                    <button type="button" class="btn btn-success">Success</button>
-                    <button type="button" class="btn btn-danger">Danger</button>
-                    <button type="button" class="btn btn-warning">Warning</button>
+            <div class="component-wrapper">
+                <div id="card-panel" class="component-section active" role="tabpanel">
+                    <article class="card card-custom">
+                        <div class="card-body">
+                            <h3 class="card-title">Título do Card</h3>
+                            <p class="card-text">Conteúdo estruturado com as cores do seu novo tema.</p>
+                            <a href="#" class="card-link">Ver mais</a>
+                        </div>
+                    </article>
                 </div>
-            </div>
 
-            <div id="form-panel" class="component-section form-components" role="tabpanel">
-                <form class="w-50" novalidate>
-                    <div class="mb-3">
-                        <label for="email-input" class="form-label">E-mail</label>
-                        <input
-                            type="email"
-                            id="email-input"
-                            class="form-control"
-                            placeholder="seu@email.com"
-                            autocomplete="email"
-                        >
-                    </div>
-                    <div class="mb-3">
-                        <label for="mensagem-input" class="form-label">Mensagem</label>
-                        <textarea
-                            id="mensagem-input"
-                            class="form-control"
-                            rows="3"
-                        ></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
-                </form>
-            </div>
+                <div id="list-panel" class="component-section" role="tabpanel">
+                    <ul class="list-group w-50">
+                        <li class="list-group-item">Primeiro Item da Lista</li>
+                        <li class="list-group-item">Segundo Item da Lista</li>
+                    </ul>
+                </div>
 
-            <div id="carousel-panel" class="component-section carousel-components" role="tabpanel">
-                <div
-                    id="carouselExample"
-                    class="carousel slide w-75"
-                    data-bs-ride="carousel"
-                    data-bs-interval="4000"
-                    aria-label="Carrossel de exemplos"
-                >
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <div id="button-panel" class="component-section button-components" role="tabpanel">
+                    <div class="d-flex gap-2">
+                        <button class="btn btn-primary">Primary</button>
+                        <button class="btn btn-outline-light">Outline</button>
                     </div>
-                    <div class="carousel-inner rounded shadow">
-                        <div class="carousel-item active">
-                            <div class="slide-placeholder bg-secondary d-flex align-items-center justify-content-center">
-                                <p class="slide-label">Slide 1 — Placeholder</p>
-                            </div>
+                </div>
+
+                <div id="form-panel" class="component-section" role="tabpanel">
+                    <form class="w-50">
+                        <div class="mb-3">
+                            <label class="form-label">E-mail</label>
+                            <input type="email" class="form-control" placeholder="seu@email.com">
                         </div>
-                        <div class="carousel-item">
-                            <div class="slide-placeholder bg-dark d-flex align-items-center justify-content-center">
-                                <p class="slide-label">Slide 2 — Placeholder</p>
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </form>
+                </div>
+
+                <div id="carousel-panel" class="component-section" role="tabpanel">
+                    <div id="carouselExample" class="carousel slide w-75" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded shadow">
+                            <div class="carousel-item active">
+                                <div class="slide-placeholder bg-secondary d-flex align-items-center justify-content-center">
+                                    <p class="slide-label">Slide 1 — Placeholder</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Anterior</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Próximo</span>
-                    </button>
                 </div>
             </div>
         </section>
 
-        <section id="sobre" class="container" aria-labelledby="sobre-title">
+        <section id="sobre" class="container">
             <div class="card-sobre">
-                <h2 id="sobre-title">O que é o Bootstrap?</h2>
-                <p>Uma biblioteca poderosa para interfaces responsivas e acessíveis, criada por Mark Otto e Jacob Thornton.</p>
-                <div class="d-flex gap-3 justify-content-center mt-3">
-                    <img src="assets/bootstrap-logo.png" alt="Logotipo do Bootstrap" width="80" height="80">
-                </div>
+                <h2>O que é o Bootstrap?</h2>
+                <p>Uma biblioteca poderosa para interfaces responsivas.</p>
+                <img src="assets/bootstrap-logo.png" alt="Bootstrap Logo">
             </div>
         </section>
     </main>
 
-    <footer role="contentinfo">
+    <footer>
         <p>&copy; 2026 — Criado com Bootstrap e CSS Customizado</p>
         <p>Grupo 4 - Componentes Bootstrap</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script src="script.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
